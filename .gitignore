@@ -1,0 +1,12 @@
+/.metadata/
+**/node_modules/
+App/platforms/
+App/plugins/
+App/www/
+Software/Release/
+Software/.settings/
+Hardware/SmartEWD.net
+Hardware/SmartEWD.kicad_pcb
+Hardware/SmartEWD.pro
+Hardware/SmartEWD.sch
+Hardware/SmartEWD-cache.lib

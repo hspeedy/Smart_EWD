@@ -1,0 +1,32 @@
+.aircraft-image {
+    width:100%;
+}
+
+.aircraft-table {
+    width:95%;
+}
+
+.center-text {
+    text-align:center;
+}
+
+.right-text {
+    text-align:right;
+}
+
+.large-text {
+    font-weight: bold;
+}
+
+.extra-large-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quartz {
+    font-family: app-quartz;
+}
+
+.red {
+    color:red;
+}

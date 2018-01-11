@@ -1,0 +1,73 @@
+<div class="aircraft-table">
+  <div align="center">
+    <table>
+      <tr>
+        <td class="right-text">On</td>
+        <td>
+          <div>
+            <app-switch size="medium" (change)="onChangeRun($event)" color="green"></app-switch>
+          </div>
+        </td>
+        <td>Off</td>
+      </tr>
+      <tr>
+        <td class="right-text">Axis 1</td>
+        <td>
+          <div>
+            <app-switch size="medium"  (change)="onChangeReverse($event)" color="white"></app-switch>
+          </div>
+        </td>
+        <td>Axis 2</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div>
+  <table class="aircraft-table">
+    <tr *ngIf="current !== undefined && run">
+      <td colspan="3" class="center-text extra-large-text quartz">{{current}}</td>
+    </tr>
+    <tr *ngIf="!run">
+      <td colspan="3" class="center-text extra-large-text quartz">No data</td>
+    </tr>
+    <tr *ngIf="current === undefined && run">
+      <td colspan="3" class="center-text extra-large-text quartz red">No data</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <img class="aircraft-image" src="assets/extra330.png">
+      </td>
+    </tr>
+    <tr>
+      <td *ngIf="engine !== undefined" class="quartz">{{engine | number:'2.2-2'}}</td>
+      <td *ngIf="engine === undefined" class="quartz">NaN</td>
+      <td *ngIf="wing !== undefined" class="quartz">{{wing | number:'2.2-2'}}</td>
+      <td *ngIf="wing === undefined" class="quartz">NaN</td>
+      <td *ngIf="tail !== undefined" class="right-text quartz">{{tail | number:'2.2-2'}}</td>
+      <td *ngIf="tail === undefined" class="right-text quartz">NaN</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <table class="aircraft-table">
+          <tr>
+            <td *ngIf="anglea !== undefined" class="center-text quartz">{{anglea | number:'2.2-2'}}</td>
+            <td *ngIf="anglea === undefined"class="center-text quartz">NaN</td>
+            <td *ngIf="angleb !== undefined" class="center-text quartz">{{angleb | number:'2.2-2'}}</td>
+            <td *ngIf="angleb === undefined" class="center-text quartz">NaN</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="center-text">
+        <app-button style="width:100px;" (click)="onButtonEngine()">Engine</app-button>
+      </td>
+      <td class="center-text">
+        <app-button style="width:100px;" (click)="onButtonWingClick()">Wing</app-button>
+      </td>
+      <td class="right-text">
+        <app-button style="width:100px;" (click)="onButtonTailClick()">Tail</app-button>
+      </td>
+    </tr>
+  </table>
+</div>

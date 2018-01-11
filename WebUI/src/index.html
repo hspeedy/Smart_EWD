@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>MyAngular</title>
+    <base href="/">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://192.168.4.1/data data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      .center {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          text-align: center;
+      } 
+      .center h1 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      } 
+    </style>
+</head>
+<body>
+  <div id="init" class="center">
+    <h1>Lade Anwendung...</h1>
+  </div>
+  <app-root></app-root>
+  <script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

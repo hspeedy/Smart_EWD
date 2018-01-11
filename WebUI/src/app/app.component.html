@@ -1,0 +1,13 @@
+<div *ngIf="ready">
+  <app-toolbar-strip [title]="title">
+  </app-toolbar-strip>
+</div>
+<div *ngIf="ready" class="content">
+  <!-- <div>
+    <app-button style="width:100px;" (click)="onButtonAClick()">A</app-button>
+    <app-button style="width:100px;" (click)="onButtonBClick()">B</app-button>
+  </div> -->
+</div>
+<div *ngIf="ready" class="content">
+  <router-outlet></router-outlet>
+</div>

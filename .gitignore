@@ -2,7 +2,8 @@
 **/node_modules/
 App/platforms/
 App/plugins/
-App/www/
+App/www/*.*
+App/www/assets/
 Software/Release/
 Software/.settings/
 Hardware/SmartEWD.net
@@ -10,3 +11,4 @@ Hardware/SmartEWD.kicad_pcb
 Hardware/SmartEWD.pro
 Hardware/SmartEWD.sch
 Hardware/SmartEWD-cache.lib
+Software/.settings/org.eclipse.cdt.core.prefs

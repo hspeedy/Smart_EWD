@@ -12,3 +12,8 @@ Hardware/SmartEWD.pro
 Hardware/SmartEWD.sch
 Hardware/SmartEWD-cache.lib
 Software/.settings/org.eclipse.cdt.core.prefs
+Hardware/SmartEWD.bin
+Hardware/SmartEWD.dsn
+Hardware/SmartEWD.kicad_pcb-bak
+Hardware/SmartEWD.rules
+Hardware/SmartEWD.ses

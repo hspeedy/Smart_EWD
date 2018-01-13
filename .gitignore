@@ -17,3 +17,5 @@ Hardware/SmartEWD.dsn
 Hardware/SmartEWD.kicad_pcb-bak
 Hardware/SmartEWD.rules
 Hardware/SmartEWD.ses
+Hardware/Gerber/*.gbr
+Hardware/Gerber/*.drl

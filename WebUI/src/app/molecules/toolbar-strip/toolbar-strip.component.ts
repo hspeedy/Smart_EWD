@@ -52,4 +52,8 @@ export class ToolbarStripComponent implements OnInit, OnDestroy {
     this.networkValue = val;
     this.networkChange.emit(val);
   }
+
+  onSettings() {
+    console.log('settings');
+  }
 }

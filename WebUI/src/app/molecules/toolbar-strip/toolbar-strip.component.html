@@ -1,6 +1,17 @@
 <div class="toolbar-strip">
-    <span>
-        <app-image24x24 class="icon" [source]="network"></app-image24x24>
-        <label class="toolbar-strip-label">{{title}}</label> 
-    </span> 
+    <table class="toolbar-strip-table">
+        <tr>
+            <td class="toolbar-strip-icon-column ">
+                <app-image24x24 [source]="network"></app-image24x24>
+            </td>
+            <td>
+                <label class="toolbar-strip-label">{{title}}</label> 
+            </td>
+            <td class="toolbar-strip-icon-column ">
+                <a>
+                    <img class="icon-settings" src="assets/ic_settings_applications_24px.svg" (click)="onSettings()">
+                </a>
+            </td>
+        </tr>
+    </table>
 </div>

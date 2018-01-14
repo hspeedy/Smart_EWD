@@ -1,12 +1,21 @@
 <div class="modal-header">
-  <h4 class="modal-title">Hi there!</h4>
-  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-    <span aria-hidden="true">&times;</span>
-  </button>
+  <h4 class="modal-title">Settings</h4>
 </div>
 <div class="modal-body">
-  <p>Hello, {{name}}!</p>
+  <div align="center">
+    <table>
+      <tr>
+        <td class="right-text">Axis 1</td>
+        <td>
+          <div>
+            <app-switch size="medium" [checked]="reverse" (change)="onChangeReverse($event)" color="white"></app-switch>
+          </div>
+        </td>
+        <td>Axis 2</td>
+      </tr>
+    </table>
+  </div>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Ok</button>
 </div>

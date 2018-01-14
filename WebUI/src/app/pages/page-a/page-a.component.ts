@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { NetworkService } from './../../services/network.service';
 import { WebService } from './../../services/web.service';
 import { CordovaService } from './../../services/cordova.service';
+import { SettingsService } from './../../services/settings.service';
 import { Data } from './../../data.interface';
 
 @Component({
@@ -22,7 +23,6 @@ export class PageAComponent implements OnInit, OnDestroy {
   private dataSubscription: AnonymousSubscription;
   
   data: Data;
-  reverse: boolean;
   run: boolean;
   current?: number;
   engine?: number;
@@ -35,19 +35,20 @@ export class PageAComponent implements OnInit, OnDestroy {
   constructor(public cordovaService: CordovaService,
               private networkService: NetworkService,
               private webService: WebService,
+              private settingsService: SettingsService,
               private router: Router) {
-    this.run == false;
-    this.current = undefined;
-    this.engine = undefined;
-    this.wing = undefined;
-    this.tail = undefined;
-    this.anglea = undefined;
-    this.angleb = undefined;
+    this.run      = false;
+    this.current  = undefined;
+    this.engine   = undefined;
+    this.wing     = undefined;
+    this.tail     = undefined;
+    this.anglea   = undefined;
+    this.angleb   = undefined;
   }
 
   ngOnInit() {
-    this.run = false;
-    this.networkSubscription = this.networkService.networkSource$.subscribe(state => {
+    this.run                  = false;
+    this.networkSubscription  = this.networkService.networkSource$.subscribe(state => {
       if(state !== undefined && state.isOnline === true) {
         this.getData();
       } else {
@@ -68,17 +69,13 @@ export class PageAComponent implements OnInit, OnDestroy {
     }
   }
 
-  onChangeReverse($event: boolean) {
-    this.reverse = $event;
-  }
-
   private getData() {
     console.log('Call web:');
     if(this.run === true) {
       this.dataSubscription = this.webService.getData().subscribe(data => {
         console.log('Success:');
         this.data = data;
-        if(this.reverse) {
+        if(this.settingsService.reverse) {
           this.current = data.roll;
         } else {
           this.current = data.pitch;

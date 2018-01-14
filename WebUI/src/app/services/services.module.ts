@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CordovaService } from './cordova.service';
 import { NetworkService } from './network.service';
 import { WebService } from './web.service';
+import { SettingsService } from './settings.service';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { WebService } from './web.service';
   providers: [
     NetworkService,
     WebService,
-    CordovaService
+    CordovaService,
+    SettingsService
   ]
 })
 export class ServicesModule { }

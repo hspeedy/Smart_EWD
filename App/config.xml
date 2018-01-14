@@ -21,6 +21,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <access origin="http://192.168.4.1/data" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     </platform>
     <platform name="windows">
         <preference name="windows-target-version" value="10.0" />
@@ -33,4 +34,5 @@
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
     <engine name="android" spec="^7.0.0" />
     <engine name="browser" spec="^5.0.3" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
 </widget>

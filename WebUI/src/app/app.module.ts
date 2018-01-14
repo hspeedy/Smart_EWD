@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AtomsModule } from './atoms/atoms.module';
@@ -24,7 +25,8 @@ import { ServicesModule } from './services/services.module';
     MoleculesModule,
     OrganismsModule,
     PagesModule,
-    AppRouter
+    AppRouter,
+    NgbModule.forRoot()
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

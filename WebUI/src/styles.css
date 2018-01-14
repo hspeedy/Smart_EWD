@@ -24,3 +24,5 @@
     font-family: "app-quartz";
     src: url("assets/quartz.ttf");
 }
+
+@import '~bootstrap/dist/css/bootstrap.min.css';

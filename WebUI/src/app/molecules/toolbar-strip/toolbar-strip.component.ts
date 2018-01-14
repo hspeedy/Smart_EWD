@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Output, Input, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { NetworkService } from './../../services/network.service';
 import { CordovaService } from './../../services/cordova.service';
+import { SettingsComponent } from './../settings/settings.component';
 
 @Component({
   selector: 'app-toolbar-strip',
@@ -18,7 +20,9 @@ export class ToolbarStripComponent implements OnInit, OnDestroy {
   @Output() titleChange = new EventEmitter<String>();
   @Output() networkChange = new EventEmitter<String>();
 
-  constructor(private cordovaService: CordovaService, private networkService: NetworkService) {
+  constructor(private cordovaService: CordovaService,
+              private networkService: NetworkService,
+              private modalService: NgbModal) {
   }
 
   ngOnInit() {
@@ -54,6 +58,8 @@ export class ToolbarStripComponent implements OnInit, OnDestroy {
   }
 
   onSettings() {
-    console.log('settings');
+    const modalRef = this.modalService.open(SettingsComponent);
+    
+    modalRef.componentInstance.name = 'World';
   }
 }

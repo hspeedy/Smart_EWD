@@ -20,6 +20,7 @@ export class SettingsService {
       invertPitch: false,
       invertRoll: false
     }
+    this.update();
   }
 
   @Input() set invertPitch(val: boolean) {
@@ -65,6 +66,7 @@ export class SettingsService {
       this.update();
     }).catch((fileError: FileError) => {
       this.initSettings();
+      this.update();
     });
   }
 

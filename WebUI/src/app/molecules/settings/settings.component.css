@@ -1,3 +1,19 @@
 .right-text {
     text-align:right;
 }
+
+.center-text {
+    text-align:center;
+}
+
+.table-group {
+    border-collapse:separate;
+    border:solid rgb(219, 219, 219) 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    width:100%;
+}
+
+.vertical-margin {
+    margin-top:10px;
+}

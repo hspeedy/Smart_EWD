@@ -3,15 +3,64 @@
 </div>
 <div class="modal-body">
   <div align="center">
-    <table>
+    <table class="table-group">
       <tr>
-        <td class="right-text">Axis 1</td>
         <td>
-          <div>
-            <app-switch size="medium" [checked]="changeAxis" (change)="onChangeChangeAxis($event)" color="white"></app-switch>
-          </div>
+          <table align="center">
+            <tr>
+              <td colspan="3" class="center-text">Select Axis</td>
+            </tr>
+            <tr>
+              <td class="right-text">Axis 1</td>
+              <td>
+                <div>
+                  <app-switch size="medium" [checked]="changeAxis" (change)="onChangeChangeAxis($event)" color="white"></app-switch>
+                </div>
+              </td>
+              <td>Axis 2</td>
+            </tr>
+          </table>
         </td>
-        <td>Axis 2</td>
+      </tr>
+    </table>
+  </div>
+  <div align="center" class="vertical-margin">
+    <table class="table-group">
+      <tr>
+        <td>
+          <table align="center">
+            <tr>
+              <td colspan="3" class="center-text">Axis 1</td>
+            </tr>
+            <tr>
+              <td class="right-text">normal</td>
+              <td>
+                <div>
+                  <app-switch size="medium" [checked]="invertRoll" (change)="onChangeInvertRoll($event)" color="green"></app-switch>
+                </div>
+              </td>
+              <td>inverted</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table align="center">
+            <tr>
+              <td colspan="3" class="center-text">Axis 2</td>
+            </tr>
+            <tr>
+              <td class="right-text">normal</td>
+              <td>
+                <div>
+                  <app-switch size="medium" [checked]="invertPitch" (change)="onChangeInvertPitch($event)" color="green"></app-switch>
+                </div>
+              </td>
+              <td>inverted</td>
+            </tr>
+          </table>
+        </td>
       </tr>
     </table>
   </div>

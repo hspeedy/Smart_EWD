@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { Router } from '@angular/router';
 
 import { CordovaService } from './services/cordova.service';
+import { SettingsService } from './services/settings.service';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private readyValue = false;
 
   constructor(public cordovaService: CordovaService,
+              private settingsService: SettingsService,
               private router: Router) {
 
   }
@@ -29,6 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
       this.cordovaService.initializeService().then(value => {
         console.log('CordovaService initialized');
         this.cordovaService.ready = true;
+        this.settingsService.loadSettings();
         this.initializationFinished();
       }).catch((message: string) => {
         console.log('CordovaService initialize failed: ' + message);

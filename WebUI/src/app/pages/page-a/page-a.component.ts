@@ -33,9 +33,9 @@ export class PageAComponent implements OnInit, OnDestroy {
 
 
   constructor(public cordovaService: CordovaService,
+              public settingsService: SettingsService,
               private networkService: NetworkService,
               private webService: WebService,
-              private settingsService: SettingsService,
               private router: Router) {
     this.run      = false;
     this.current  = undefined;
@@ -75,7 +75,7 @@ export class PageAComponent implements OnInit, OnDestroy {
       this.dataSubscription = this.webService.getData().subscribe(data => {
         console.log('Success:');
         this.data = data;
-        if(this.settingsService.reverse) {
+        if(this.settingsService.changeAxis) {
           this.current = data.roll;
         } else {
           this.current = data.pitch;

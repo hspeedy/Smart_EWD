@@ -8,6 +8,7 @@
       "systemjs",
       "cordova",
       "cordova-plugin-device",
+      "cordova-plugin-file",
       "cordova-plugin-network-information"
     ]
   },

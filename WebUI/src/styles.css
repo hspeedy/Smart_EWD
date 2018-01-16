@@ -1,3 +1,5 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 * {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -25,4 +27,3 @@
     src: url("assets/quartz.ttf");
 }
 
-@import '~bootstrap/dist/css/bootstrap.min.css';

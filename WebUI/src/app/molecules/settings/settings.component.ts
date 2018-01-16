@@ -10,18 +10,18 @@ import { SettingsService } from './../../services/settings.service';
 })
 export class SettingsComponent implements OnInit {
 
-  reverse: boolean;
+  changeAxis: boolean;
   
   constructor(public activeModal: NgbActiveModal,
               private settingsService: SettingsService) { }
 
   ngOnInit() {
-    this.reverse = this.settingsService.reverse;
+    this.changeAxis = this.settingsService.changeAxis;
   }
 
-  onChangeReverse($event: boolean) {
-    this.reverse = $event;
-    this.settingsService.reverse = this.reverse;
+  onChangeChangeAxis($event: boolean) {
+    this.changeAxis = $event;
+    this.settingsService.changeAxis = this.changeAxis;
   }
 
 }

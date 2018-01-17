@@ -27,23 +27,23 @@
   <div align="center" class="vertical-margin">
     <table class="table-group">
       <tr>
-        <td>
-          <table align="center">
-            <tr>
-              <td colspan="3" class="center-text">Axis 1</td>
-            </tr>
-            <tr>
-              <td class="right-text">normal</td>
-              <td>
-                <div>
-                  <app-switch size="medium" [checked]="invertRoll" (change)="onChangeInvertRoll($event)" color="green"></app-switch>
-                </div>
-              </td>
-              <td>inverted</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
+          <td>
+            <table align="center">
+              <tr>
+                <td colspan="3" class="center-text">Axis 1</td>
+              </tr>
+              <tr>
+                <td class="right-text">normal</td>
+                <td>
+                  <div>
+                    <app-switch size="medium" [checked]="invertPitch" (change)="onChangeInvertPitch($event)" color="green"></app-switch>
+                  </div>
+                </td>
+                <td>inverted</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
       <tr>
         <td>
           <table align="center">
@@ -54,7 +54,7 @@
               <td class="right-text">normal</td>
               <td>
                 <div>
-                  <app-switch size="medium" [checked]="invertPitch" (change)="onChangeInvertPitch($event)" color="green"></app-switch>
+                  <app-switch size="medium" [checked]="invertRoll" (change)="onChangeInvertRoll($event)" color="green"></app-switch>
                 </div>
               </td>
               <td>inverted</td>

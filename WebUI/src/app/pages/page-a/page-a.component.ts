@@ -33,7 +33,7 @@ export class PageAComponent implements OnInit, OnDestroy {
 
 
   constructor(public cordovaService: CordovaService,
-              public settingsService: SettingsService,
+              private settingsService: SettingsService,
               private networkService: NetworkService,
               private webService: WebService,
               private router: Router) {
@@ -76,9 +76,17 @@ export class PageAComponent implements OnInit, OnDestroy {
         console.log('Success:');
         this.data = data;
         if(this.settingsService.changeAxis) {
-          this.current = data.roll;
+          if(this.settingsService.invertRoll) {
+            this.current = data.roll * -1;
+          } else {
+            this.current = data.roll;
+          }
         } else {
-          this.current = data.pitch;
+          if(this.settingsService.invertPitch) {
+            this.current = data.pitch;
+          } else {
+            this.current = data.pitch * -1;
+          }
         }
         this.subscribeToData();
       }, (err) => {
